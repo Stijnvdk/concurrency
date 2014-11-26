@@ -10,6 +10,7 @@ public class Main {
         createAndLogForAantal(200000);
         createAndLogForAantal(400000);
         createAndLogForAantal(800000);
+
     }
 
     public static void createAndLogForAantal(int aantal){
