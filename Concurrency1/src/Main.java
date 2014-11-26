@@ -4,15 +4,21 @@
 public class Main {
 
     public static void main (String args[]){
-        createAndLogForAantal(25000);
-        createAndLogForAantal(50000);
-        createAndLogForAantal(100000);
-        createAndLogForAantal(200000);
-        createAndLogForAantal(400000);
-        createAndLogForAantal(800000);
+
+        int[] aantallen = {25000, 50000, 100000, 200000, 400000, 800000};
+
+        for (int aantal: aantallen) {
+            int totaal = 0;
+            for (int i = 0; i < 5; i++) {
+                totaal += createAndLogForAantal(aantal);
+            }
+            System.out.println("[Meting] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
+
+        }
+
     }
 
-    public static void createAndLogForAantal(int aantal){
+    public static long createAndLogForAantal(int aantal){
 
         long start = System.currentTimeMillis();
 
@@ -20,6 +26,7 @@ public class Main {
         Sorter.insertionSort(arrayToSort);
 
         long end = System.currentTimeMillis();
-        System.out.println("Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
+        System.out.println("[DEBUG] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
+        return end - start;
     }
 }

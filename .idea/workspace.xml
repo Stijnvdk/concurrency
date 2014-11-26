@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4fde4dd8-2375-4194-b7de-6de11e2014a8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concurrency2/src/ArrayGeneratorTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concurrency2/src/MainTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/concurrency2/src/SorterTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Concurrency1/Main.class" afterPath="$PROJECT_DIR$/out/production/Concurrency1/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Concurrency1/src/Main.java" afterPath="$PROJECT_DIR$/Concurrency1/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="concurrency.iws" />
@@ -58,10 +56,7 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
               <caret line="11" column="31" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
               <folding>
-                <element signature="e#165#166#0" expanded="true" />
-                <element signature="e#211#212#0" expanded="true" />
-                <element signature="e#247#248#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
+                <marker date="1417008412000" expanded="true" signature="408:750" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -556,12 +551,12 @@
       <option name="number" value="Default" />
       <updated>1417005438845</updated>
       <workItem from="1417006064554" duration="788000" />
-      <workItem from="1417008120581" duration="1381000" />
+      <workItem from="1417008120581" duration="1438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2169000" />
+    <option name="totallyTimeSpent" value="2226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="4" y="23" width="1676" height="1027" extended-state="6" />
@@ -689,10 +684,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
           <caret line="11" column="31" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
           <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#211#212#0" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
+            <marker date="1417008412000" expanded="true" signature="408:750" placeholder="{...}" />
           </folding>
         </state>
       </provider>
