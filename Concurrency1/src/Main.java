@@ -8,7 +8,8 @@ public class Main {
         createAndLogForAantal(50000);
         createAndLogForAantal(100000);
         createAndLogForAantal(200000);
-        createAndLogForAantal();
+        createAndLogForAantal(400000);
+        createAndLogForAantal(800000);
     }
 
     public static void createAndLogForAantal(int aantal){
@@ -19,7 +20,6 @@ public class Main {
         Sorter.insertionSort(arrayToSort);
 
         long end = System.currentTimeMillis();
-        System.out.println("Done sorting, took " + (end - start) + " milisecs");
+        System.out.println("Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
     }
-
 }
