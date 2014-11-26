@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Concurrency1/Concurrency1.iml" filepath="$PROJECT_DIR$/Concurrency1/Concurrency1.iml" />
       <module fileurl="file://$PROJECT_DIR$/concurrency.iml" filepath="$PROJECT_DIR$/concurrency.iml" />
+      <module fileurl="file://$PROJECT_DIR$/concurrency2/concurrency2.iml" filepath="$PROJECT_DIR$/concurrency2/concurrency2.iml" />
     </modules>
   </component>
 </project>
-

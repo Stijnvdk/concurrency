@@ -14,7 +14,7 @@ public class MainTwo {
             for (int i = 0; i < 5; i++) {
                 totaal += createAndLogForAantal(aantal);
             }
-            System.out.println("[Meting] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
+            System.out.println("[Meting 2] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
 
         }
 
@@ -27,14 +27,15 @@ public class MainTwo {
         int[] arrayToSort = ArrayGeneratorTwo.createArray(aantal);
         SorterTwo threadOne = new SorterTwo();
         SorterTwo threadTwo = new SorterTwo();
-        int[] toSortOne;
-        int[] toSortTwo;
         int half = aantal/2;
+        int[] toSortOne = new int[half];
+        int[] toSortTwo = new int[half];
+
         for( int i = 0; i > aantal; i++ ){
             if(i > half){
-                toSortOne[] = arrayToSort[i];
+                toSortOne[i] = arrayToSort[i];
             }else{
-                toSortTwo[] = arrayToSort[i];
+                toSortTwo[i-half] = arrayToSort[i];
             }
         }
         threadOne.setArrayToSort(toSortOne);
@@ -46,11 +47,11 @@ public class MainTwo {
         try{
                 threadOne.join();threadTwo.join();
         } catch (InterruptedException e){
-            System.out.println(e.getMessage();
+            System.out.println(e.getMessage());
         }
 
-        int[] listOne = threadOne.getgetArrayToSort();
-        int[] listTwo = threadTwo.getgetArrayToSort();
+        int[] listOne = threadOne.getArrayToSort();
+        int[] listTwo = threadTwo.getArrayToSort();
 
 
 
