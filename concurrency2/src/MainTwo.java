@@ -1,74 +1,59 @@
 import java.lang.InterruptedException;
+import java.util.Arrays;
 
 /**
  * Created by Stijn on 26-11-2014.
  */
 public class MainTwo {
 
-    public static void main (String args[]){
+    public static void main(String args[]) {
 
         int[] aantallen = {25000, 50000, 100000, 200000, 400000, 800000};
 
-        for (int aantal: aantallen) {
+        for (int aantal : aantallen) {
             int totaal = 0;
             for (int i = 0; i < 5; i++) {
-                totaal += createAndLogForAantal(aantal);
+                totaal += testSortForAantal(aantal);
             }
             System.out.println("[Meting 2] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
-
         }
-
     }
+    
+    public static long testSortForAantal(int aantal){
 
-    public static long createAndLogForAantal(int aantal){
-
+        int[] array = ArrayGeneratorTwo.createArray(aantal);
         long start = System.currentTimeMillis();
 
-        int[] arrayToSort = ArrayGeneratorTwo.createArray(aantal);
-        SorterTwo threadOne = new SorterTwo();
-        SorterTwo threadTwo = new SorterTwo();
-        int half = aantal/2;
-        int[] toSortOne = new int[half];
-        int[] toSortTwo = new int[half];
 
-        for( int i = 0; i > aantal; i++ ){
-            if(i > half){
-                toSortOne[i] = arrayToSort[i];
-            }else{
-                toSortTwo[i-half] = arrayToSort[i];
-            }
-        }
-        threadOne.setArrayToSort(toSortOne);
-        threadTwo.setArrayToSort(toSortTwo);
+        int[] firstHalf = Arrays.copyOfRange(array, 0, array.length/2);
+        int[] lastHalf = Arrays.copyOfRange(array, array.length/2, array.length);
 
-        threadOne.start();
-        threadTwo.start();
+        SorterThread firstThread = new SorterThread(firstHalf);
+        SorterThread secondThread = new SorterThread(lastHalf);
+
+        firstThread.start();
+        secondThread.start();
 
         try{
-                threadOne.join();threadTwo.join();
+            firstThread.join();
+            secondThread.join();
         } catch (InterruptedException e){
             System.out.println(e.getMessage());
         }
 
-        int[] listOne = threadOne.getArrayToSort();
-        int[] listTwo = threadTwo.getArrayToSort();
-
-
-
-//        Sorter.insertionSort(arrayToSort);
+        int[] merged = merge(firstThread.getArrayToSort(), secondThread.getArrayToSort());
 
         long end = System.currentTimeMillis();
         System.out.println("[DEBUG] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
         return end - start;
     }
 
-    private int[] merge(int[] a, int[] b) {
+    private static int[] merge(int[] a, int[] b) {
 
         int[] answer = new int[a.length + b.length];
         int i = 0, j = 0, k = 0;
 
-        while (i < a.length && j < b.length)
-        {
+        while (i < a.length && j < b.length) {
             if (a[i] < b[j])
                 answer[k++] = a[i++];
 
