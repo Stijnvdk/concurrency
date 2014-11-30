@@ -1,3 +1,5 @@
+import java.awt.*;
+
 /**
  * Created by Stijn on 26-11-2014.
  */
@@ -13,15 +15,14 @@ public class MainThree {
             for (int i = 0; i < 5; i++) {
                 totaal += createAndLogForAantal(aantal, threshold);
             }
-            System.out.println("[Meting 2] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
+            System.out.println("[Meting 3] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
         }
-
+        Toolkit.getDefaultToolkit().beep();
     }
 
     public static long createAndLogForAantal(int aantal, int threshold) {
 
         int[] arrayToSort = ArrayGeneratorThree.createArray(aantal);
-
         long start = System.currentTimeMillis();
         SorterThree mainThread = new SorterThree(threshold);
         mainThread.setArrayToSort(arrayToSort);
@@ -37,7 +38,7 @@ public class MainThree {
         mainThread.getArrayToSort();
 
         long end = System.currentTimeMillis();
-        System.out.println("[DEBUG] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
+        System.out.println("[DEBUG 3] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
         return end - start;
     }
 }

@@ -79,7 +79,7 @@ public class SorterThree extends Thread {
             }
             arrayToSort[j] = newValue;
         }
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     public int[] mergeList(int[] a, int[] b) {

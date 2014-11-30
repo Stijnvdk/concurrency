@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.lang.InterruptedException;
 import java.util.Arrays;
 
@@ -17,14 +18,13 @@ public class MainTwo {
             }
             System.out.println("[Meting 2] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
         }
+        Toolkit.getDefaultToolkit().beep();
     }
     
     public static long testSortForAantal(int aantal){
 
         int[] array = ArrayGeneratorTwo.createArray(aantal);
         long start = System.currentTimeMillis();
-
-
         int[] firstHalf = Arrays.copyOfRange(array, 0, array.length/2);
         int[] lastHalf = Arrays.copyOfRange(array, array.length/2, array.length);
 
@@ -44,7 +44,7 @@ public class MainTwo {
         int[] merged = merge(firstThread.getArrayToSort(), secondThread.getArrayToSort());
 
         long end = System.currentTimeMillis();
-        System.out.println("[DEBUG] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
+        System.out.println("[DEBUG 2] Done sorting list of " + aantal + " , took " + (end - start) + " milisecs");
         return end - start;
     }
 

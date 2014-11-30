@@ -1,3 +1,5 @@
+import java.awt.*;
+
 /**
  * Created by Stijn on 26-11-2014.
  */
@@ -13,16 +15,13 @@ public class Main {
                 totaal += createAndLogForAantal(aantal);
             }
             System.out.println("[Meting] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
-
         }
-
+        Toolkit.getDefaultToolkit().beep();
     }
 
     public static long createAndLogForAantal(int aantal){
-
-        long start = System.currentTimeMillis();
-
         int[] arrayToSort = ArrayGenerator.createArray(aantal);
+        long start = System.currentTimeMillis();
         Sorter.insertionSort(arrayToSort);
 
         long end = System.currentTimeMillis();
