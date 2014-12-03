@@ -1,3 +1,5 @@
+package util;
+
 import java.util.Random;
 
 /**
@@ -12,7 +14,7 @@ public class ArrayGenerator {
         int[] result = new int[aantal];
         for (int i = 0; i < aantal; i++)
         {
-            result[i] = random.nextInt(100);
+            result[i] = random.nextInt(25000);
         }
         return result;
     }

@@ -1,3 +1,8 @@
+package opdracht3;
+
+import util.ArrayGenerator;
+import opdracht3.SorterThree;
+
 import java.awt.*;
 
 /**
@@ -22,7 +27,7 @@ public class MainThree {
 
     public static long createAndLogForAantal(int aantal, int threshold) {
 
-        int[] arrayToSort = ArrayGeneratorThree.createArray(aantal);
+        int[] arrayToSort = ArrayGenerator.createArray(aantal);
         long start = System.currentTimeMillis();
         SorterThree mainThread = new SorterThree(threshold);
         mainThread.setArrayToSort(arrayToSort);

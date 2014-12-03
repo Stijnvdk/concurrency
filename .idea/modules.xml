@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Concurrency1/Concurrency1.iml" filepath="$PROJECT_DIR$/Concurrency1/Concurrency1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/concorrency3/concorrency3.iml" filepath="$PROJECT_DIR$/concorrency3/concorrency3.iml" />
       <module fileurl="file://$PROJECT_DIR$/concurrency.iml" filepath="$PROJECT_DIR$/concurrency.iml" />
-      <module fileurl="file://$PROJECT_DIR$/concurrency2/concurrency2.iml" filepath="$PROJECT_DIR$/concurrency2/concurrency2.iml" />
     </modules>
   </component>
 </project>

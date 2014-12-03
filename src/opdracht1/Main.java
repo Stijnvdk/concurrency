@@ -1,4 +1,7 @@
-import java.awt.*;
+package opdracht1;
+
+import opdracht1.Sorter;
+import util.ArrayGenerator;
 
 /**
  * Created by Stijn on 26-11-2014.
@@ -16,10 +19,11 @@ public class Main {
             }
             System.out.println("[Meting] Done sorting list of " + aantal + " , took avarage of " + (totaal / 5) + " milisecs");
         }
-        Toolkit.getDefaultToolkit().beep();
+
     }
 
     public static long createAndLogForAantal(int aantal){
+
         int[] arrayToSort = ArrayGenerator.createArray(aantal);
         long start = System.currentTimeMillis();
         Sorter.insertionSort(arrayToSort);
